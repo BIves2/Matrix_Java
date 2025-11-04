@@ -61,4 +61,15 @@ public final class Options{
         }
         return opt;
     }
+
+    public static void addingToMatrix2(Matrix_2_2 object){
+        System.out.println("Okay, enter the matrix you want to add to this matrix :");
+        object.printM();
+        Matrix_2_2 toAdd = new Matrix_2_2();
+        Matrix_2_2 result = new Matrix_2_2();
+        toAdd.scanValues();
+        result = ArithmeticPack.matrixSum(toAdd, object, Matrix_2_2::new);
+        System.out.println("The result is :");
+        result.printM();
+    }
 }

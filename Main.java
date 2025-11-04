@@ -38,6 +38,9 @@ public class Main {
                             case 0:
                                 dontStopSubM1 = false;
                             break;
+                            case 1:
+                                Options.addingToMatrix2(matrixObject);
+                            break;
                         }
                     }
                 break;
