@@ -28,17 +28,33 @@ public class Main {
                     boolean dontStopSubM1 = true;
                     Matrix_2_2 matrixObject = new Matrix_2_2();
                     while(dontStopSubM1){
+                        int y1 = 0;
                         try{
-                            int y = Options.subMenu1(matrixObject);
+                            y1 = Options.subMenu1(matrixObject);
                         }catch(OptionsException oe){
                             continue;
+                        }
+                        switch(y1){
+                            case 0:
+                                dontStopSubM1 = false;
+                            break;
                         }
                     }
                 break;
                 case 2:
                     System.out.println("This part has not been developped yet. Come back later !");
+                    dontStopM = false;
+                break;
+                case 3:
+                    System.out.println("This part has not been developped yet. Come back later !");
+                    dontStopM = false;
+                break;
+                case 4:
+                    System.out.println("This part has not been developped yet. Come back later !");
+                    dontStopM = false;
                 break;
             }
         }
+        System.out.println("Good bye user. See you later !");
     }
 }
