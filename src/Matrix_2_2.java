@@ -61,4 +61,8 @@ public class Matrix_2_2 extends Matrix{
         Matrix_2_2 reverse = new Matrix_2_2((1/determinant)*values[1][1],(1/determinant)*-values[0][1],(1/determinant)*-values[1][0],(1/determinant)*values[0][0]);
         return reverse;       
     }
+
+    public void copy(Matrix_2_2 another){
+        this.values = another.values;
+    }
 }
