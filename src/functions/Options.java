@@ -19,7 +19,7 @@ public final class Options{
      */
     public static int Main() throws OptionsException{
         int opt = 0;
-        System.out.println("\033[2J\033[3J\033[H");
+        System.out.println("\033[2J\033[H");
         System.out.println("Hello and Welcome to \033[32mMatrix Main\033[0m\n");
         System.out.println("0. Exit");
         System.out.println("1. Create and manipulate matrix 2X2");
@@ -44,9 +44,9 @@ public final class Options{
         Matrix_2_2 object = new Matrix_2_2();
         object.scanValues();
         anyMatrix_2_2.copy(object);
-        System.out.println("There is your matrix :");
+        System.out.println("There is your matrix :\033[32m");
         object.printM();
-        System.out.println("Now, which operation do you want to do with it : ");
+        System.out.println("\033[0m\n\nNow, which operation do you want to do with it : ");
         Scanner enter = null;
         System.out.println("0. Return to main menu");
         System.out.println("1. Add to another matrix");

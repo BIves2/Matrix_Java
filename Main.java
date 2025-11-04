@@ -17,6 +17,7 @@ public class Main {
         while (dontStopM){
             try{
                 x = Options.Main();
+                System.out.println("\n");
             }catch(OptionsException moe){
                 continue;
             }
@@ -31,6 +32,8 @@ public class Main {
                         int y1 = 0;
                         try{
                             y1 = Options.subMenu1(matrixObject);
+                            System.out.println("\n");
+
                         }catch(OptionsException oe){
                             continue;
                         }
@@ -40,24 +43,30 @@ public class Main {
                             break;
                             case 1:
                                 Options.addingToMatrix2(matrixObject);
+                                System.out.println("\n\033[33m>>> End Of Program <<<\033[0m");
+                                dontStopM = false;
+                                dontStopSubM1 = false;
                             break;
                         }
                     }
                 break;
                 case 2:
+                    System.out.println("\n");
                     System.out.println("This part has not been developped yet. Come back later !");
                     dontStopM = false;
                 break;
                 case 3:
+                    System.out.println("\n");
                     System.out.println("This part has not been developped yet. Come back later !");
                     dontStopM = false;
                 break;
                 case 4:
+                    System.out.println("\n");
                     System.out.println("This part has not been developped yet. Come back later !");
                     dontStopM = false;
                 break;
             }
         }
-        System.out.println("Good bye user. See you later !");
+        System.out.println("\nGood bye user. See you later !");
     }
 }
