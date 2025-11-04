@@ -15,7 +15,7 @@ public final class Options{
     /**
      * This function is used to set the first menu and to take the first choice of the user
      * @return opt : option chosen by user
-     * @throws OptionsException
+     * @throws OptionsException : this exception occured when an option enter by user doesn't exist at all
      */
     public static int Main() throws OptionsException{
         int opt = 0;
@@ -25,6 +25,8 @@ public final class Options{
         System.out.println("1. Create and manipulate matrix 2X2");
         System.out.println("2. Create and manipulate any matrix");
         System.out.println("3. About author");
+        System.out.println("4. About this program");
+
         Scanner enter = null;
         try{
             enter = new Scanner(System.in);
