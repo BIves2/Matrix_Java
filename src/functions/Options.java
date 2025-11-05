@@ -2,7 +2,9 @@ package src.functions;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.function.BiFunction;
 
+import src.Matrix;
 import src.Matrix_2_2;
 import src.OptionsException;
 
@@ -69,7 +71,21 @@ public final class Options{
         Matrix_2_2 result = new Matrix_2_2();
         toAdd.scanValues();
         result = ArithmeticPack.matrixSum(toAdd, object, Matrix_2_2::new);
-        System.out.println("The result is :");
+        System.out.println("The result is :\033[32m");
         result.printM();
+        System.out.println("\033[0m");
+    }
+
+    public static void multiplyMatrix2(Matrix_2_2 object){
+        System.out.println("Okay, enter the matrix you want to multiply with this matrix: ");
+        object.printM();
+        Matrix_2_2 toMultiply = new Matrix_2_2();
+        Matrix_2_2 result = new Matrix_2_2();
+        toMultiply.scanValues();
+        BiFunction<Integer, Integer, Matrix_2_2> factory= (row, col) -> new Matrix_2_2();
+        result = ArithmeticPack.matrixMulti(object, toMultiply, factory);
+        System.out.println("The result is : \033[32m");
+        result.printM();
+        System.out.println("\033[0m");
     }
 }

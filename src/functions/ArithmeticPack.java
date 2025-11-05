@@ -49,7 +49,7 @@ public final class ArithmeticPack {
         double[][] aValues = a.getValues();
         double[][] bValues = b.getValues(); 
         double[][] cValues = new double[a.getLines()][b.getColumns()];
-        if(a.getLines() == b.getColumns()){
+        if(a.getColumns() == b.getLines()){
             for(int i = 0; i < a.getLines(); i++){
                 for(int j = 0; j < b.getColumns(); j++){
                     for(int  k = 0; k < a.getColumns(); k++){

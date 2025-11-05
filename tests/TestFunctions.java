@@ -9,7 +9,7 @@ public class TestFunctions {
         Matrix_2_2 a = new Matrix_2_2(3, 2, 3, 2);
         Matrix_2_2 b = new Matrix_2_2(3,2,3,2);
         Matrix n = new Matrix(3,3);
-        Matrix c = ArithmeticPack.matrixSum(a, b, Matrix::new);
+        Matrix c = ArithmeticPack.matrixSum(a, b, Matrix_2_2::new);
         a.printM();
         System.out.println("+");
         b.printM();

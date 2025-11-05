@@ -47,6 +47,12 @@ public class Main {
                                 dontStopM = false;
                                 dontStopSubM1 = false;
                             break;
+                            case 2:
+                                Options.multiplyMatrix2(matrixObject);
+                                System.out.println("\n\033[33m>>> End Of Program <<<\033[0m");
+                                dontStopM = false;
+                                dontStopSubM1 = false; 
+                            break;
                         }
                     }
                 break;
