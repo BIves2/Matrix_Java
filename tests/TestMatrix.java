@@ -14,7 +14,7 @@ public class TestMatrix {
         Matrix b = new Matrix(3,2);
         b.scanValues();
         b.printM();
-        Matrix c = b.transposit();
+        Matrix c = b.transposit(Matrix::new);
         c.printM();
     }
 }

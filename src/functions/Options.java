@@ -82,10 +82,30 @@ public final class Options{
         Matrix_2_2 toMultiply = new Matrix_2_2();
         Matrix_2_2 result = new Matrix_2_2();
         toMultiply.scanValues();
-        BiFunction<Integer, Integer, Matrix_2_2> factory= (row, col) -> new Matrix_2_2();
+        BiFunction<Integer, Integer, Matrix_2_2> factory = (row, col) -> new Matrix_2_2();
         result = ArithmeticPack.matrixMulti(object, toMultiply, factory);
         System.out.println("The result is : \033[32m");
         result.printM();
+        System.out.println("\033[0m");
+    }
+
+    public static void transpositMatrix2(Matrix_2_2 object){
+        System.out.println("The transposit of your matrix : ");
+        object.printM();
+        System.out.println("Is the next matrix :");
+        Matrix_2_2 result = object.transposit((row, cols)->new Matrix_2_2());
+        System.out.println("\033[32m");
+        result.printM();
+        System.out.println("\033[0m");
+    }
+
+    public static void reverseMatrix2(Matrix_2_2 object){
+        System.out.println("The reversed matrix of your matrix : ");
+        object.printM();
+        System.out.println("Is the next matrix :");
+        Matrix_2_2 reversed = object.reverseMatrix();
+        System.out.println("\033[32m");
+        reversed.printM(); 
         System.out.println("\033[0m");
     }
 }
