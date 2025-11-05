@@ -108,4 +108,32 @@ public final class Options{
         reversed.printM(); 
         System.out.println("\033[0m");
     }
+
+    public static int subMenu2(Matrix anyMatrix) throws OptionsException{
+        Scanner enter = new Scanner(System.in);
+        int lines = 0;
+        int columns = 0;
+        System.out.println("About your matrix : ");
+        System.out.print("Enter the number of lines :");
+        lines = enter.nextInt();
+        System.out.print("Enter the nunmber of columns : ");
+        columns = enter.nextInt();
+        Matrix object = new Matrix(lines, columns);
+        System.out.println("Now enter the values of your matrix : ");
+        object.scanValues();
+        System.out.println("There's your matrix : \033[32m");
+        object.printM();
+        System.out.println("\033[0m Now what do you want to do with your matrix ?");
+        System.out.println("0. Return to main menu");
+        System.out.println("1. Add to another matrix");
+        System.out.println("2. Multiply with another matrix");
+        int opt = 0;
+        try{ 
+            opt = enter.nextInt();
+        } catch(InputMismatchException ime){
+            throw new OptionsException("Not an option");
+        }
+        anyMatrix.copy(object);
+        return opt;
+    }
 }

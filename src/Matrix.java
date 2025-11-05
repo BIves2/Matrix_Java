@@ -105,4 +105,14 @@ public class Matrix {
     public int getColumns(){
         return columns;
     }
+
+    /**
+     * Function used to copy the values of another matrix
+     * @param another
+     */
+    public void copy(Matrix another){
+        this.lines = another.lines;
+        this.columns = another.columns;
+        this.values = another.values;
+    }
 }

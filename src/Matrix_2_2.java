@@ -64,6 +64,8 @@ public class Matrix_2_2 extends Matrix{
     }
 
     public void copy(Matrix_2_2 another){
+        this.lines = another.lines;
+        this.columns = another.columns;
         this.values = another.values;
     }
 }

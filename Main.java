@@ -1,6 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import src.Matrix;
 import src.Matrix_2_2;
 import src.OptionsException;
 import src.functions.Options;
@@ -69,9 +70,28 @@ public class Main {
                     }
                 break;
                 case 2:
-                    System.out.println("\n");
-                    System.out.println("This part has not been developped yet. Come back later !");
-                    dontStopM = false;
+                    boolean dontStopSubM2 = true;
+                    Matrix matrixObject2 = new Matrix();
+                    while(dontStopSubM2){
+                        int y2 = 0;
+                        try{
+                            y2 = Options.subMenu2(matrixObject2);
+                            System.out.println("\n");
+                        } catch(OptionsException oe){
+                            continue;
+                        }
+                        switch (y2) {
+                            case 0:
+                                dontStopSubM2 = false;
+                            break;
+                            case 1:
+                                
+                            break;
+                            case 2:
+
+                            break;
+                        }
+                    } 
                 break;
                 case 3:
                     System.out.println("\n");
