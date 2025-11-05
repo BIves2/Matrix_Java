@@ -21,7 +21,7 @@ public final class Options{
      */
     public static int Main() throws OptionsException{
         int opt = 0;
-        System.out.println("\033[2J\033[H");
+        System.out.println("\033[2J\033[3J\033[H");
         System.out.println("Hello and Welcome to \033[32mMatrix Main\033[0m\n");
         System.out.println("0. Exit");
         System.out.println("1. Create and manipulate matrix 2X2");

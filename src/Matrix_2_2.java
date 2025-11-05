@@ -45,6 +45,7 @@ public class Matrix_2_2 extends Matrix{
      * @return state : true if it's inversible, false if it's not
      */
     public boolean isInversible(){
+        determinant = values[0][0]*values[1][1]-values[0][1]*values[1][0];
         boolean state = (determinant == 0)? false : true;
         return state;
     }
