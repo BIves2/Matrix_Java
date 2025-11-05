@@ -85,7 +85,10 @@ public class Main {
                                 dontStopSubM2 = false;
                             break;
                             case 1:
-                                
+                                Options.addingToMatrix(matrixObject2);
+                                System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
+                                dontStopM = false;
+                                dontStopSubM2 = false;
                             break;
                             case 2:
 

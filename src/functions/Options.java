@@ -70,7 +70,7 @@ public final class Options{
         Matrix_2_2 toAdd = new Matrix_2_2();
         Matrix_2_2 result = new Matrix_2_2();
         toAdd.scanValues();
-        result = ArithmeticPack.matrixSum(toAdd, object, Matrix_2_2::new);
+        result = ArithmeticPack.matrixSum(toAdd, object, (row, column)->new Matrix_2_2());
         System.out.println("The result is :\033[32m");
         result.printM();
         System.out.println("\033[0m");
@@ -135,5 +135,17 @@ public final class Options{
         }
         anyMatrix.copy(object);
         return opt;
+    }
+
+    public static void addingToMatrix(Matrix object){
+        System.out.println("Okay, enter the matrix you want to add to this matrix :");
+        object.printM();
+        Matrix toAdd = new Matrix(object.getLines(), object.getColumns());
+        Matrix result = new Matrix();
+        toAdd.scanValues();
+        result = ArithmeticPack.matrixSum(toAdd, object, Matrix::new);
+        System.out.println("The result is :\033[32m");
+        result.printM();
+        System.out.println("\033[0m");
     }
 }

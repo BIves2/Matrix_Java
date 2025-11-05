@@ -20,9 +20,9 @@ public final class ArithmeticPack {
      * @param b the second Matrix of the two to sum
      * @return the result of addition or the first Matrix passed to function if they can't be added
      */
-    public static <M extends Matrix> M matrixSum(M a, M b, Supplier <M> factory){
+    public static <M extends Matrix> M matrixSum(M a, M b, BiFunction <Integer, Integer,M> factory){
         if(a.getLines() == b.getLines() && a.getColumns() == b.getColumns()){
-            M c = factory.get();
+            M c = factory.apply(a.getLines(), b.getColumns());
             double[][] aValues = a.getValues();
             double[][] bValues = b.getValues();
             double[][] cValues = c.getValues();
