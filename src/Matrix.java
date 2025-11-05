@@ -1,6 +1,7 @@
 package src;
 
 import java.util.Scanner;
+import java.util.function.BiFunction;
 
 /**
  * Class Matrix : used to represent a matrix of reel numbers
@@ -62,16 +63,16 @@ public class Matrix {
     /**
      * Function used to find the transposite of a matrix
      */
-    public Matrix transposit(){
-        Matrix transpositMatrix = new Matrix(columns, lines);
-        double transpositValues[][] = new double[columns][lines];
+    public <M extends Matrix> M transposit(BiFunction<Integer, Integer, M> factory){
+        M transposedMatrix = factory.apply(columns, lines);
+        double transposeValues[][] = new double[columns][lines];
         for(int i = 0; i < columns; i++){
             for(int j = 0; j < lines; j++){
-                transpositValues[i][j] = values[j][i];
+                transposeValues[i][j] = values[j][i];
             }
         }
-        transpositMatrix.setValues(transpositValues);
-        return transpositMatrix;
+        transposedMatrix.setValues(transposeValues);
+        return transposedMatrix;
     }
 
     /**
