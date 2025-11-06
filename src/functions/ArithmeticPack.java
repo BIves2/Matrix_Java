@@ -1,7 +1,6 @@
 package src.functions;
 
 import java.util.function.BiFunction;
-import java.util.function.Supplier;
 
 import src.Matrix;
 

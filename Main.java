@@ -1,6 +1,3 @@
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
 import src.Matrix;
 import src.Matrix_2_2;
 import src.OptionsException;

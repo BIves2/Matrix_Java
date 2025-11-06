@@ -34,8 +34,10 @@ public final class Options{
             enter = new Scanner(System.in);
             opt = enter.nextInt();
         } catch(InputMismatchException ime){
+            enter.close();
             throw new OptionsException("Not an option");
         } 
+        enter.close();
         return opt;
     }
 
@@ -59,8 +61,10 @@ public final class Options{
             enter = new Scanner(System.in);
             opt = enter.nextInt();
         } catch(InputMismatchException ime){
+            enter.close();
             throw new OptionsException("Not an option");
         }
+        enter.close();
         return opt;
     }
 
@@ -70,7 +74,7 @@ public final class Options{
         Matrix_2_2 toAdd = new Matrix_2_2();
         Matrix_2_2 result = new Matrix_2_2();
         toAdd.scanValues();
-        result = ArithmeticPack.matrixSum(toAdd, object, (row, column)->new Matrix_2_2());
+        result = ArithmeticPack.matrixSum(toAdd, object, (row, col) -> new Matrix_2_2());
         System.out.println("The result is :\033[32m");
         result.printM();
         System.out.println("\033[0m");
@@ -93,7 +97,7 @@ public final class Options{
         System.out.println("The transposit of your matrix : ");
         object.printM();
         System.out.println("Is the next matrix :");
-        Matrix_2_2 result = object.transposit((row, cols)->new Matrix_2_2());
+        Matrix_2_2 result = object.transposit((row, cols) -> new Matrix_2_2());
         System.out.println("\033[32m");
         result.printM();
         System.out.println("\033[0m");
@@ -131,9 +135,11 @@ public final class Options{
         try{ 
             opt = enter.nextInt();
         } catch(InputMismatchException ime){
+            enter.close();
             throw new OptionsException("Not an option");
         }
         anyMatrix.copy(object);
+        enter.close();
         return opt;
     }
 

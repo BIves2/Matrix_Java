@@ -45,6 +45,7 @@ public class Matrix {
                 values[i][j] = scan.nextDouble();
             }
         }
+        scan.close();
     }
 
     /**
