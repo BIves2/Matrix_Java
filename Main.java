@@ -76,7 +76,6 @@ public class Main {
                         int y2 = 0;
                         try{
                             y2 = Options.subMenu2(matrixObject2);
-                            System.out.println("\n");
                         } catch(OptionsException oe){
                             continue;
                         }
@@ -91,7 +90,10 @@ public class Main {
                                 dontStopSubM2 = false;
                             break;
                             case 2:
-
+                                Options.multiplyMatrix(matrixObject2);
+                                System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
+                                dontStopM = false;
+                                dontStopSubM2 = false;
                             break;
                         }
                     } 

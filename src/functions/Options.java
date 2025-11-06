@@ -148,4 +148,16 @@ public final class Options{
         result.printM();
         System.out.println("\033[0m");
     }
+
+    public static void multiplyMatrix(Matrix object){
+        System.out.println("Okay, enter the matrix you want to multiply with this matrix: ");
+        object.printM();
+        Matrix toMultiply = new Matrix();
+        Matrix result = new Matrix();
+        toMultiply.scanValues();
+        result = ArithmeticPack.matrixMulti(object, toMultiply, Matrix::new);
+        System.out.println("The result is : \033[32m");
+        result.printM();
+        System.out.println("\033[0m");
+    }
 }
