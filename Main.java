@@ -41,25 +41,25 @@ public class Main {
                             break;
                             case 1:
                                 Options.addingToMatrix2(matrixObject);
-                                System.out.println("\n\033[33m>>> End Of Program <<<\033[0m");
+                                System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
                                 dontStopM = false;
                                 dontStopSubM1 = false;
                             break;
                             case 2:
                                 Options.multiplyMatrix2(matrixObject);
-                                System.out.println("\n\033[33m>>> End Of Program <<<\033[0m");
+                                System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
                                 dontStopM = false;
                                 dontStopSubM1 = false; 
                             break;
                             case 3:
                                 Options.transpositMatrix2(matrixObject);
-                                System.out.println("\n\033[33m>>> End Of Program <<<\033[0m");
+                                System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
                                 dontStopM = false;
                                 dontStopSubM1 = false;
                             break;
                             case 4:
                                 Options.reverseMatrix2(matrixObject);
-                                System.out.println("\n\033[33m>>> End Of Program <<<\033[0m");
+                                System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
                                 dontStopM = false;
                                 dontStopSubM1 = false;
                             break;
@@ -98,11 +98,13 @@ public class Main {
                 case 3:
                     System.out.println("\n");
                     System.out.println("This part has not been developped yet. Come back later !");
+                    System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
                     dontStopM = false;
                 break;
                 case 4:
                     System.out.println("\n");
                     System.out.println("This part has not been developped yet. Come back later !");
+                    System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
                     dontStopM = false;
                 break;
             }
