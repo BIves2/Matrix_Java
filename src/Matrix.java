@@ -13,6 +13,7 @@ public class Matrix {
     int lines;
     int columns;
     double[][] values;
+    Scanner scan = null;
 
     /**
      * Default constructor
@@ -36,7 +37,7 @@ public class Matrix {
      * Function used to set all the values contained on the matrix
      */
     public void scanValues(){
-        Scanner scan = new Scanner(System.in);
+        scan = new Scanner(System.in);
         System.out.println("Enter the values of your matrix line per line :");
         for(int i = 0 ; i < lines ; i++){
             System.out.println("Line "+(i+1)+ " : ");
@@ -45,7 +46,6 @@ public class Matrix {
                 values[i][j] = scan.nextDouble();
             }
         }
-        scan.close();
     }
 
     /**
@@ -115,5 +115,12 @@ public class Matrix {
         this.lines = another.lines;
         this.columns = another.columns;
         this.values = another.values;
+    }
+
+    /**
+     * Function used to close resources used by matrix
+     */
+    public void close(){
+        scan.close();
     }
 }

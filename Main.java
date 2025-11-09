@@ -42,24 +42,28 @@ public class Main {
                             case 1:
                                 Options.addingToMatrix2(matrixObject);
                                 System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
+                                matrixObject.close();
                                 dontStopM = false;
                                 dontStopSubM1 = false;
                             break;
                             case 2:
                                 Options.multiplyMatrix2(matrixObject);
                                 System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
+                                matrixObject.close();
                                 dontStopM = false;
                                 dontStopSubM1 = false; 
                             break;
                             case 3:
                                 Options.transpositMatrix2(matrixObject);
                                 System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
+                                matrixObject.close();
                                 dontStopM = false;
                                 dontStopSubM1 = false;
                             break;
                             case 4:
                                 Options.reverseMatrix2(matrixObject);
                                 System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
+                                matrixObject.close();
                                 dontStopM = false;
                                 dontStopSubM1 = false;
                             break;
@@ -83,12 +87,14 @@ public class Main {
                             case 1:
                                 Options.addingToMatrix(matrixObject2);
                                 System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
+                                matrixObject2.close();
                                 dontStopM = false;
                                 dontStopSubM2 = false;
                             break;
                             case 2:
                                 Options.multiplyMatrix(matrixObject2);
                                 System.out.println("\n\033[3m\033[33m >>> End Of Program <<< \033[0m\033[0m");
+                                matrixObject2.close();
                                 dontStopM = false;
                                 dontStopSubM2 = false;
                             break;

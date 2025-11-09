@@ -14,6 +14,8 @@ public final class Options{
      */
     private Options(){};
 
+    private static Scanner enter = null; 
+
     /**
      * This function is used to set the first menu and to take the first choice of the user
      * @return opt : option chosen by user
@@ -29,15 +31,12 @@ public final class Options{
         System.out.println("3. About author");
         System.out.println("4. About this program");
 
-        Scanner enter = null;
         try{
             enter = new Scanner(System.in);
             opt = enter.nextInt();
         } catch(InputMismatchException ime){
-            enter.close();
             throw new OptionsException("Not an option");
         } 
-        enter.close();
         return opt;
     }
 
@@ -61,10 +60,8 @@ public final class Options{
             enter = new Scanner(System.in);
             opt = enter.nextInt();
         } catch(InputMismatchException ime){
-            enter.close();
             throw new OptionsException("Not an option");
         }
-        enter.close();
         return opt;
     }
 
@@ -78,6 +75,9 @@ public final class Options{
         System.out.println("The result is :\033[32m");
         result.printM();
         System.out.println("\033[0m");
+        if(enter!=null){
+            enter.close();
+        }
     }
 
     public static void multiplyMatrix2(Matrix_2_2 object){
@@ -91,6 +91,9 @@ public final class Options{
         System.out.println("The result is : \033[32m");
         result.printM();
         System.out.println("\033[0m");
+        if(enter!=null){
+            enter.close();
+        }
     }
 
     public static void transpositMatrix2(Matrix_2_2 object){
@@ -101,6 +104,9 @@ public final class Options{
         System.out.println("\033[32m");
         result.printM();
         System.out.println("\033[0m");
+        if(enter!=null){
+            enter.close();
+        }
     }
 
     public static void reverseMatrix2(Matrix_2_2 object){
@@ -111,10 +117,13 @@ public final class Options{
         System.out.println("\033[32m");
         reversed.printM(); 
         System.out.println("\033[0m");
+        if(enter!=null){
+            enter.close();
+        }
     }
 
     public static int subMenu2(Matrix anyMatrix) throws OptionsException{
-        Scanner enter = new Scanner(System.in);
+        enter = new Scanner(System.in);
         int lines = 0;
         int columns = 0;
         System.out.println("About your matrix : ");
@@ -135,11 +144,9 @@ public final class Options{
         try{ 
             opt = enter.nextInt();
         } catch(InputMismatchException ime){
-            enter.close();
             throw new OptionsException("Not an option");
         }
         anyMatrix.copy(object);
-        enter.close();
         return opt;
     }
 
@@ -153,6 +160,9 @@ public final class Options{
         System.out.println("The result is :\033[32m");
         result.printM();
         System.out.println("\033[0m");
+        if(enter!=null){
+            enter.close();
+        }
     }
 
     public static void multiplyMatrix(Matrix object){
@@ -165,5 +175,8 @@ public final class Options{
         System.out.println("The result is : \033[32m");
         result.printM();
         System.out.println("\033[0m");
+        if(enter!=null){
+            enter.close();
+        }
     }
 }
